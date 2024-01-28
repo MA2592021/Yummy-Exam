@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-black">
+    <!-- 
+    <div class="loading-contact">
+        <span class="loader"></span>
+    </div> -->
+
+    <aside class="sideBox">
+      <div class="sideBox-content bg-black pt-4 position-relative">
+        <div class="side-title">
+          <a href="./search.html">Search</a>
+
+          <a href="./categories.html" id="categ">Categories</a>
+
+          <a href="./area.html">Area</a>
+
+          <a href="./ingredients.html">Ingredients</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+
+        <div class="side-copyWrite position-absolute bottom-0 p-4">
+          <i class="fa-brands fa-facebook" style="color: white"></i>
+          <i class="fa-brands fa-twitter" style="color: white"></i>
+          <i class="fa-solid fa-globe" style="color: white"></i>
+
+          <p class="text-white mb-0">Copyright Â© 2019 All Rights</p>
+          <p class="text-white">Reserved.</p>
+        </div>
+      </div>
+
+      <div class="sideBoxIcons bg-white p-2">
+        <div class="image-logo pt-3">
+          <img class="logo w-100" src="images/logo.png" alt="" />
+        </div>
+
+        <div class="sideIcon">
+          <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+        </div>
+
+        <div class="icons pb-3">
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </aside>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row ms-5 ps-4">
+          <div class="col-md-6">
+            <div class="input-group mb-3 ms-5 w-75">
+              <input
+                id="userName"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Name"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserName()"
+              />
+            </div>
+
+            <div
+              id="nameError"
+              class="alert error bg-danger w-75 ms-5 text-center pb-0 d-none"
+            >
+              <p>Special characters and numbers not allowed</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group mb-3 me-5 w-75">
+              <input
+                id="userEmail"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Email"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserEmail()"
+              />
+            </div>
+
+            <div
+              id="EmailError"
+              class="alert error bg-danger w-75 me-5 text-center pb-0 d-none"
+            >
+              <p>Email not valid *exemple@yyy.zzz</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group mb-3 ms-5 w-75">
+              <input
+                id="userPhone"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Phone"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserPhone()"
+              />
+            </div>
+
+            <div
+              id="phoneError"
+              class="alert error bg-danger w-75 ms-5 text-center pb-0 d-none"
+            >
+              <p>Enter valid Phone Number</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group mb-3 me-5 w-75">
+              <input
+                id="userAge"
+                type="number"
+                class="form-control"
+                placeholder="Enter Your Age"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserAge()"
+              />
+            </div>
+
+            <div
+              id="ageError"
+              class="alert error bg-danger w-75 me-5 text-center pb-0 d-none"
+            >
+              <p>Enter valid age</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group mb-3 ms-5 w-75">
+              <input
+                id="userPassword"
+                type="password"
+                class="form-control"
+                placeholder="Enter Your Password"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserPassword()"
+              />
+            </div>
+
+            <div
+              id="passError"
+              class="alert error bg-danger w-75 ms-5 text-center pb-0 d-none"
+            >
+              <p>
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group mb-3 me-5 w-75">
+              <input
+                id="userRepassword"
+                type="password"
+                class="form-control"
+                placeholder="Repassword"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                oninput="validateUserRepassword(this.value)"
+              />
+            </div>
+
+            <div
+              id="RepassError"
+              class="alert error bg-danger w-75 me-5 text-center pb-0 d-none"
+            >
+              <p>Enter valid repassword</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-btn d-flex justify-content-center mt-5">
+          <button id="Btn" class="btn btn-outline-danger" disabled>
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
